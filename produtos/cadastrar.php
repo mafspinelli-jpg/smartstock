@@ -10,7 +10,8 @@ exit();
 
 }
 
-include("../config/conexao.php");
+include(__DIR__ . "/../config/conexao.php");
+
 
 if(isset($_POST['cadastrar'])){
 
@@ -63,9 +64,7 @@ Descrição:
 <br>
 
 <textarea
-name="descricao">
-
-</textarea>
+name="descricao"></textarea>
 
 <br><br>
 

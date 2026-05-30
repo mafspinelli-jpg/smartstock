@@ -5,10 +5,17 @@ $usuario = "root";
 $senha = "";
 $banco = "smartstock";
 
-$conexao = mysqli_connect($host, $usuario, $senha, $banco);
+$conexao = mysqli_connect(
+$host,
+$usuario,
+$senha,
+$banco
+);
 
-if (!$conexao) {
-    die("Erro na conexão com o banco de dados");
+if(!$conexao){
+
+die("Erro na conexão");
+
 }
 
 ?>

@@ -10,7 +10,7 @@ exit();
 
 }
 
-include("../config/conexao.php");
+include(__DIR__ . "/../config/conexao.php");
 
 $sql = "SELECT * FROM produtos";
 
@@ -41,6 +41,8 @@ Cadastrar Novo Produto
 <th>Preço</th>
 
 <th>Estoque</th>
+
+<th>Ações</th>
 
 </tr>
 
@@ -79,6 +81,24 @@ while($produto = mysqli_fetch_assoc($resultado)){
 <td>
 
 <?= $produto['estoque']; ?>
+
+</td>
+
+<td>
+
+<a href="editar.php?id=<?= $produto['id']; ?>">
+
+Editar
+
+</a>
+
+|
+
+<a href="excluir.php?id=<?= $produto['id']; ?>">
+
+Excluir
+
+</a>
 
 </td>
 
